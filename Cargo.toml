@@ -58,7 +58,7 @@ glob = "0.3.3"
 hashbrown = { version = "0.15.5", default-features = false, features = ["inline-more"] }
 hex = "0.4.3"
 ignore = "0.4.23"
-indexmap = { version = "2.10.0", features = ["serde"] }
+indexmap = { version = "2.11.0", features = ["serde"] }
 indoc = "2.0.6"
 insta = { version = "1.43.1", features = ["filters"] }
 interim = { version = "0.2.1", features = ["chrono_0_4"] }
@@ -80,7 +80,7 @@ rand = "0.9.2"
 rand_chacha = "0.9.0"
 rayon = "1.11.0"
 ref-cast = "1.0.24"
-regex = "1.11.1"
+regex = "1.11.2"
 rpassword = "7.4.0"
 rustix = { version = "1.0.8", features = ["fs"] }
 same-file = "1.0.6"
@@ -88,7 +88,7 @@ sapling-renderdag = "0.1.0"
 sapling-streampager = "0.11.0"
 scm-record = "0.8.0"
 serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0.142"
+serde_json = "1.0.143"
 slab = "0.4.11"
 smallvec = { version = "1.15.1", features = [
     "const_generics",
@@ -97,10 +97,10 @@ smallvec = { version = "1.15.1", features = [
 ] }
 strsim = "0.11.1"
 syn = "2.0.106"
-tempfile = "3.20.0"
+tempfile = "3.21.0"
 test-case = "3.3.1"
 textwrap = "0.16.2"
-thiserror = "2.0.15"
+thiserror = "2.0.16"
 timeago = { version = "0.4.2", default-features = false }
 tokio = { version = "1.47.1", features = ["io-util"] }
 toml_edit = { version = "0.22.27", features = ["serde"] }
