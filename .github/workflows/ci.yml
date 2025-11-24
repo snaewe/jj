@@ -51,7 +51,7 @@ jobs:
     timeout-minutes: 20
 
     steps:
-    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+    - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
       with:
         persist-credentials: false
     - name: Set up Windows Builders
@@ -61,7 +61,7 @@ jobs:
       uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
       with:
         toolchain: 1.84
-    - uses: taiki-e/install-action@537c30d2b45cc3aa3fb35e2bbcfb61ef93fd6f02
+    - uses: taiki-e/install-action@f79fe7514db78f0a7bdba3cb6dd9c1baa7d046d9
       with:
         tool: nextest,taplo-cli
     - name: Install mold
@@ -93,7 +93,7 @@ jobs:
     name: build (no git)
     runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+    - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
       with:
         persist-credentials: false
     - name: Install Rust
@@ -113,7 +113,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -124,7 +124,7 @@ jobs:
     name: check (protos)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
@@ -140,7 +140,7 @@ jobs:
     name: check (rustfmt)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
@@ -155,7 +155,7 @@ jobs:
       checks: write
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
@@ -179,7 +179,7 @@ jobs:
 
     name: check (cargo-deny, ${{ matrix.checks }})
     steps:
-    - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+    - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
       with:
         persist-credentials: false
     - uses: EmbarkStudios/cargo-deny-action@f2ba7abc2abebaf185c833c3961145a3c275caad
@@ -190,14 +190,14 @@ jobs:
     name: check (codespell)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: 3.11
       - name: Install uv
-        uses: astral-sh/setup-uv@5a7eac68fb9809dea845d802897dc5c723910fa3
+        uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244
         with:
           # If you bump the version, also update docs/contributing.md
           # and all other workflows that install uv
@@ -209,7 +209,7 @@ jobs:
     name: check (doctests)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
@@ -231,14 +231,14 @@ jobs:
     name: check (mkdocs)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
         with:
           python-version: 3.11
       - name: Install uv
-        uses: astral-sh/setup-uv@5a7eac68fb9809dea845d802897dc5c723910fa3
+        uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244
         with:
           # If you bump the version, also update docs/contributing.md
           # and all other workflows that install uv
@@ -251,11 +251,11 @@ jobs:
     name: check (latest mkdocs, optional)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - name: Install uv
-        uses: astral-sh/setup-uv@5a7eac68fb9809dea845d802897dc5c723910fa3
+        uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244
       # 'only-managed' means that uv will always download Python, even
       # if the runner happens to provide a compatible version
       - name: Check that `mkdocs` can build the docs
@@ -268,12 +268,12 @@ jobs:
       security-events: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
 
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@5a7eac68fb9809dea845d802897dc5c723910fa3
+        uses: astral-sh/setup-uv@1e862dfacbd1d6d858c55d9b792c756523627244
 
       - name: Run zizmor
         run: uvx zizmor --format sarif . > results.sarif
@@ -281,7 +281,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@014f16e7ab1402f30e7c3329d33797e7948572db
+        uses: github/codeql-action/upload-sarif@fdbfb4d2750291e159f0156def62b853c2798ca2
         with:
           sarif_file: results.sarif
           category: zizmor
@@ -291,7 +291,7 @@ jobs:
     name: check (Cargo.lock dependency count)
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
+      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3
         with:
           persist-credentials: false
       - name: Check total dependency count in Cargo.lock
