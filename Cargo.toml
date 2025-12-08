@@ -63,7 +63,7 @@ indoc = "2.0.7"
 insta = { version = "1.44.3", features = ["filters"] }
 interim = { version = "0.2.1", features = ["chrono_0_4"] }
 itertools = "0.14.0"
-libc = { version = "0.2.177" }
+libc = { version = "0.2.178" }
 maplit = "1.0.2"
 num_cpus = "1.17.0"
 once_cell = "1.21.3"
@@ -103,7 +103,7 @@ textwrap = "0.16.2"
 thiserror = "2.0.17"
 timeago = { version = "0.5.0", default-features = false }
 tokio = { version = "1.48.0", features = ["io-util"] }
-toml_edit = { version = "0.23.7", features = ["serde"] }
+toml_edit = { version = "0.23.9", features = ["serde"] }
 tracing = "0.1.43"
 tracing-chrome = "0.7.2"
 tracing-subscriber = { version = "0.3.22", default-features = false, features = [
