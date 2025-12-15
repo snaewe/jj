@@ -61,7 +61,7 @@ jobs:
       uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
       with:
         toolchain: 1.84
-    - uses: taiki-e/install-action@50708e9ba8d7b6587a2cb575ddaa9a62e927bc06
+    - uses: taiki-e/install-action@d850aa816998e5cf15f67a78c7b933f2a5033f8a
       with:
         tool: nextest,taplo-cli
     - name: Install mold
@@ -197,7 +197,7 @@ jobs:
         with:
           python-version: 3.11
       - name: Install uv
-        uses: astral-sh/setup-uv@ed21f2f24f8dd64503750218de024bcf64c7250a
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867
         with:
           # If you bump the version, also update docs/contributing.md
           # and all other workflows that install uv
@@ -238,7 +238,7 @@ jobs:
         with:
           python-version: 3.11
       - name: Install uv
-        uses: astral-sh/setup-uv@ed21f2f24f8dd64503750218de024bcf64c7250a
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867
         with:
           # If you bump the version, also update docs/contributing.md
           # and all other workflows that install uv
@@ -255,7 +255,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install uv
-        uses: astral-sh/setup-uv@ed21f2f24f8dd64503750218de024bcf64c7250a
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867
       # 'only-managed' means that uv will always download Python, even
       # if the runner happens to provide a compatible version
       - name: Check that `mkdocs` can build the docs
@@ -273,7 +273,7 @@ jobs:
           persist-credentials: false
 
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@ed21f2f24f8dd64503750218de024bcf64c7250a
+        uses: astral-sh/setup-uv@681c641aba71e4a1c380be3ab5e12ad51f415867
 
       - name: Run zizmor
         run: uvx zizmor --format sarif . > results.sarif
@@ -281,7 +281,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@cf1bb45a277cb3c205638b2cd5c984db1c46a412
+        uses: github/codeql-action/upload-sarif@1b168cd39490f61582a9beae412bb7057a6b2c4e
         with:
           sarif_file: results.sarif
           category: zizmor
