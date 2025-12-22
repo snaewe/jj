@@ -28,7 +28,7 @@ clap = { version = "4.5.53", features = [
     "wrap_help",
     "string",
 ] }
-clap_complete = { version = "4.5.61", features = ["unstable-dynamic"] }
+clap_complete = { version = "4.5.62", features = ["unstable-dynamic"] }
 clap_complete_nushell = "4.5.10"
 # Update clap-markdown manually since test_generate_md_cli_help snapshot
 # will need regenerating.
@@ -60,7 +60,7 @@ hex = "0.4.3"
 ignore = "0.4.25"
 indexmap = { version = "2.12.1", features = ["serde"] }
 indoc = "2.0.7"
-insta = { version = "1.44.3", features = ["filters"] }
+insta = { version = "1.45.0", features = ["filters"] }
 interim = { version = "0.2.1", features = ["chrono_0_4"] }
 itertools = "0.14.0"
 libc = { version = "0.2.178" }
@@ -103,8 +103,8 @@ textwrap = "0.16.2"
 thiserror = "2.0.17"
 timeago = { version = "0.5.0", default-features = false }
 tokio = { version = "1.48.0", features = ["io-util"] }
-toml_edit = { version = "0.23.9", features = ["serde"] }
-tracing = "0.1.43"
+toml_edit = { version = "0.24.0", features = ["serde"] }
+tracing = "0.1.44"
 tracing-chrome = "0.7.2"
 tracing-subscriber = { version = "0.3.22", default-features = false, features = [
     "std",
