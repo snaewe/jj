@@ -47,7 +47,7 @@ dunce = "1.0.5"
 etcetera = "0.10.0"
 either = "1.15.0"
 futures = "0.3.31"
-gix = { version = "0.77.0", default-features = false, features = [
+gix = { version = "0.78.0", default-features = false, features = [
     "attributes",
     "blob-diff",
     "index",
@@ -72,10 +72,10 @@ pest = "2.8.5"
 pest_derive = "2.8.5"
 pollster = "0.4.0"
 pretty_assertions = "1.4.1"
-proc-macro2 = "1.0.105"
+proc-macro2 = "1.0.106"
 prost = "0.14.3"
 prost-build = "0.14.3"
-quote = "1.0.43"
+quote = "1.0.44"
 rand = "0.9.2"
 rand_chacha = "0.9.0"
 rayon = "1.11.0"
