@@ -22,7 +22,7 @@ assert_matches = "1.5.0"
 async-trait = "0.1.89"
 blake2 = "0.10.6"
 bstr = "1.12.1"
-clap = { version = "4.5.54", features = [
+clap = { version = "4.5.56", features = [
     "derive",
     "deprecated",
     "wrap_help",
@@ -60,7 +60,7 @@ hex = "0.4.3"
 ignore = "0.4.25"
 indexmap = { version = "2.13.0", features = ["serde"] }
 indoc = "2.0.7"
-insta = { version = "1.46.1", features = ["filters"] }
+insta = { version = "1.46.2", features = ["filters"] }
 interim = { version = "0.2.1", features = ["chrono_0_4"] }
 itertools = "0.14.0"
 libc = { version = "0.2.180" }
@@ -89,7 +89,7 @@ sapling-streampager = "0.12.0"
 scm-record = "0.8.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.149"
-slab = "0.4.11"
+slab = "0.4.12"
 smallvec = { version = "1.15.1", features = [
     "const_generics",
     "const_new",
@@ -115,7 +115,7 @@ tracing-subscriber = { version = "0.3.22", default-features = false, features = 
 unicode-width = "0.2.0"
 version_check = "0.9.5"
 watchman_client = { version = "0.9.0" }
-whoami = "2.0.2"
+whoami = "2.1.0"
 winreg = "0.55"
 
 # put all inter-workspace libraries, i.e. those that use 'path = ...' here in
