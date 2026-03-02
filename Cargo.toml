@@ -34,7 +34,7 @@ clap_complete_nushell = "4.5.10"
 # will need regenerating.
 clap-markdown = "=0.1.5"
 clap_mangen = "0.2.31"
-chrono = { version = "0.4.43", default-features = false, features = [
+chrono = { version = "0.4.44", default-features = false, features = [
     "std",
     "clock",
 ] }
@@ -97,7 +97,7 @@ smallvec = { version = "1.15.1", features = [
 ] }
 strsim = "0.11.1"
 syn = "2.0.117"
-tempfile = "3.25.0"
+tempfile = "3.26.0"
 test-case = "3.3.1"
 textwrap = "0.16.2"
 thiserror = "2.0.18"
