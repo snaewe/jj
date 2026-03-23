@@ -47,7 +47,7 @@ dunce = "1.0.5"
 etcetera = "0.10.0"
 either = "1.15.0"
 futures = "0.3.32"
-gix = { version = "0.80.0", default-features = false, features = [
+gix = { version = "0.81.0", default-features = false, features = [
     "attributes",
     "blob-diff",
     "index",
@@ -103,7 +103,7 @@ textwrap = "0.16.2"
 thiserror = "2.0.18"
 timeago = { version = "0.6.0", default-features = false }
 tokio = { version = "1.50.0", features = ["io-util"] }
-toml_edit = { version = "0.25.4", features = ["serde"] }
+toml_edit = { version = "0.25.5", features = ["serde"] }
 tracing = "0.1.44"
 tracing-chrome = "0.7.2"
 tracing-subscriber = { version = "0.3.23", default-features = false, features = [
